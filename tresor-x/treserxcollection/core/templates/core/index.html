@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'core/base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+{% for figurine in figurines %}
+<ul>
+    <li>
+        <div>
+            <h2> {{ figurine.name }}</h2>
+            <img src='{{ figurine.image }}'>
+        </div>
+
+    </li>
+</ul>
+{% endfor %}
+
+{% endblock %}
